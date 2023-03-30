@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC7E557729D60FCF0010B529 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7E557629D60FCF0010B529 /* KeyboardResponder.swift */; };
 		ECD5336C29D53B8400EA26A6 /* GetFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD5336B29D53B8400EA26A6 /* GetFitApp.swift */; };
 		ECD5336E29D53B8400EA26A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD5336D29D53B8400EA26A6 /* ContentView.swift */; };
 		ECD5337029D53B8700EA26A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECD5336F29D53B8700EA26A6 /* Assets.xcassets */; };
@@ -21,7 +22,6 @@
 		ECD533A129D53FBF00EA26A6 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD533A029D53FBF00EA26A6 /* MainView.swift */; };
 		ECD533A329D53FE900EA26A6 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD533A229D53FE900EA26A6 /* AppViewModel.swift */; };
 		ECD533A529D5404800EA26A6 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD533A429D5404800EA26A6 /* SignUpView.swift */; };
-		ECD533A729D540F800EA26A6 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD533A629D540F800EA26A6 /* KeyboardResponder.swift */; };
 		ECD533A929D5417900EA26A6 /* SwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD533A829D5417900EA26A6 /* SwitchView.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC7E557629D60FCF0010B529 /* KeyboardResponder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
 		ECD5336829D53B8400EA26A6 /* GetFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECD5336B29D53B8400EA26A6 /* GetFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFitApp.swift; sourceTree = "<group>"; };
 		ECD5336D29D53B8400EA26A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,7 +60,6 @@
 		ECD533A029D53FBF00EA26A6 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		ECD533A229D53FE900EA26A6 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		ECD533A429D5404800EA26A6 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		ECD533A629D540F800EA26A6 /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
 		ECD533A829D5417900EA26A6 /* SwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,7 +92,6 @@
 		ECD5335F29D53B8400EA26A6 = {
 			isa = PBXGroup;
 			children = (
-				ECD533A629D540F800EA26A6 /* KeyboardResponder.swift */,
 				ECD5336A29D53B8400EA26A6 /* GetFit */,
 				ECD5337B29D53B8700EA26A6 /* GetFitTests */,
 				ECD5338529D53B8700EA26A6 /* GetFitUITests */,
@@ -115,6 +114,7 @@
 			children = (
 				ECD5336B29D53B8400EA26A6 /* GetFitApp.swift */,
 				ECD5339C29D53F4500EA26A6 /* SignInView.swift */,
+				EC7E557629D60FCF0010B529 /* KeyboardResponder.swift */,
 				ECD533A429D5404800EA26A6 /* SignUpView.swift */,
 				ECD5339E29D53F8D00EA26A6 /* ViewRouter.swift */,
 				ECD533A029D53FBF00EA26A6 /* MainView.swift */,
@@ -295,7 +295,7 @@
 				ECD533A329D53FE900EA26A6 /* AppViewModel.swift in Sources */,
 				ECD533A529D5404800EA26A6 /* SignUpView.swift in Sources */,
 				ECD5336C29D53B8400EA26A6 /* GetFitApp.swift in Sources */,
-				ECD533A729D540F800EA26A6 /* KeyboardResponder.swift in Sources */,
+				EC7E557729D60FCF0010B529 /* KeyboardResponder.swift in Sources */,
 				ECD533A129D53FBF00EA26A6 /* MainView.swift in Sources */,
 				ECD5339F29D53F8D00EA26A6 /* ViewRouter.swift in Sources */,
 				ECD533A929D5417900EA26A6 /* SwitchView.swift in Sources */,

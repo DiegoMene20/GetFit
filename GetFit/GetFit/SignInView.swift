@@ -16,35 +16,66 @@ struct SignInView: View {
     
     @State var email = ""
     @State var password = ""
+    @State private var title: String = ""
     
     
     var body: some View {
         GeometryReader { geometry in
             ZStack{
                 
-                Text("BrickSortz")
+                Text("GetFit")
                     .padding()
                     .foregroundColor(.black)
                     .font(.system(size: 60))
-                    .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.20)
+                    .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.10)
                     .offset(y: -keyboardResponder.currentHeight*0.1)
                 
-                TextField("Email", text: $email)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
-                    .font(.system(size: 25))
-                    .foregroundColor(.secondary)
-                    .frame(width: 356, height: 50, alignment: .center)
-                    .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.45)
-                    .offset(y: -keyboardResponder.currentHeight*0.08)
+                ZStack(alignment: .leading) {
+                    if title.isEmpty {
+                        Text("Password")
+                            .bold()
+                            .foregroundColor(Color.white.opacity(0.4))
+                    }
+                    
+                    TextField("", text: $email)
+                    
+                }
+                .frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.06, alignment: .center)
+                .padding(.horizontal, 10)
+                .padding(.vertical, 4)
+                .overlay( RoundedRectangle(cornerRadius: 10)
+                    .stroke(LinearGradient(
+                        colors: [
+                            .red,
+                            .blue
+                        ],
+                        startPoint: .leading,
+                        endPoint: .trailing
+                    )) )
+                .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.2)
                 
-                SecureField("Password", text: $password)
-                    .textFieldStyle(.roundedBorder)
-                    .padding()
-                    .font(.system(size: 25))
-                    .foregroundColor(.secondary)
-                    .frame(width: 356, height: 50, alignment: .center)
-                    .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.54)
+                ZStack(alignment: .leading) {
+                    if title.isEmpty {
+                        Text("Email")
+                            .bold()
+                            .foregroundColor(Color.white.opacity(0.4))
+                    }
+                    
+                    TextField("", text: $password)
+                    
+                }
+                .frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.06, alignment: .center)
+                .padding(.horizontal, 10)
+                .padding(.vertical, 4)
+                .overlay( RoundedRectangle(cornerRadius: 10)
+                    .stroke(LinearGradient(
+                        colors: [
+                            .red,
+                            .blue
+                        ],
+                        startPoint: .leading,
+                        endPoint: .trailing
+                    )) )
                 
                 Button(action: {
                     viewRouter.currentPage = .MainPage
@@ -69,42 +100,14 @@ struct SignInView: View {
                         .foregroundColor(Color.white)
                 })
                 .padding()
-                .frame(width: 325, height: 50, alignment: .center)
-                .background(Color.yellow)
+                .frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.06, alignment: .center)
+                .background(Color("Fern Green"))
                 .cornerRadius(15)
-                .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.75)
+                .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.95)
                 .offset(y: -keyboardResponder.currentHeight*0.04)
                 
-                Text("Forgot Login info: ")
-                    .font(.system(size: 12))
-                    .foregroundColor(Color.white)
-                    .position(x: geometry.size.width * 0.61, y: geometry.size.height * 0.58)
-                    .offset(y: -keyboardResponder.currentHeight*(-0.02))
-                
-                Button(action: {
-                    
-                }, label: {
-                    Text("Click Here")
-                        .font(.system(size: 12))
-                        .foregroundColor(Color.blue)
-                })
-                .position(x: geometry.size.width * 0.8, y: geometry.size.height * 0.58)
-                .offset(y: -keyboardResponder.currentHeight*(-0.02))
-                
-                Text("Don't have an account yet: ")
-                    .font(.system(size: 12))
-                    .foregroundColor(Color.white)
-                    .position(x: geometry.size.width * 0.41, y: geometry.size.height * 0.8)
-                
-                Button(action: {
-                    viewRouter.currentPage = .SignUpPage
-                }, label: {
-                    Text("Click Here")
-                        .font(.system(size: 12))
-                        .foregroundColor(Color.blue)
-                })
-                .position(x: geometry.size.width * 0.66, y: geometry.size.height * 0.8)
             }
+           .background(Color("English Violet"))
         }
     }
 }
