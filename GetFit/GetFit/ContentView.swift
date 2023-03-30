@@ -8,14 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject var viewModel: AppViewModel
+    @StateObject var viewRouter = ViewRouter()
+    //@StateObject var viewRouter2 = ViewRouter2()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ZStack {
+    
+           // if viewModel.signedIn {
+           //     SwitchView2()
+          //          .environmentObject(viewModel)
+          //          .environmentObject(viewRouter2)
+          //          .environmentObject(viewRouter)
+          //
+         //   } else {
+                SwitchView()
+                    .environmentObject(viewModel)
+                    .environmentObject(viewRouter)
+         //   }
         }
-        .padding()
+        .onAppear {
+            viewModel.signedIn = viewModel.isSignedIn
+        }
     }
 }
 
