@@ -23,21 +23,22 @@ struct SignInView: View {
         GeometryReader { geometry in
             ZStack{
                 
-                Text("GetFit")
+                Text("LiftFit")
                     .padding()
-                    .foregroundColor(.black)
+                    .foregroundColor(Color("Cactus"))
                     .font(.system(size: 60))
                     .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.10)
                     .offset(y: -keyboardResponder.currentHeight*0.1)
                 
                 ZStack(alignment: .leading) {
-                    if title.isEmpty {
+                    if password.isEmpty {
                         Text("Password")
                             .bold()
                             .foregroundColor(Color.white.opacity(0.4))
                     }
                     
-                    TextField("", text: $email)
+                    TextField("", text: $password)
+                        .foregroundColor(Color.white)
                     
                 }
                 .frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.06, alignment: .center)
@@ -46,22 +47,24 @@ struct SignInView: View {
                 .overlay( RoundedRectangle(cornerRadius: 10)
                     .stroke(LinearGradient(
                         colors: [
-                            .red,
-                            .blue
+                            Color("Cactus"),
+                            Color("Grey Goose"),
+                            Color("Dark Grey Blue")
                         ],
                         startPoint: .leading,
                         endPoint: .trailing
                     )) )
-                .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.2)
+                .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.3)
                 
                 ZStack(alignment: .leading) {
-                    if title.isEmpty {
+                    if email.isEmpty {
                         Text("Email")
                             .bold()
                             .foregroundColor(Color.white.opacity(0.4))
                     }
                     
-                    TextField("", text: $password)
+                    TextField("", text: $email)
+                        .foregroundColor(Color.white)
                     
                 }
                 .frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.06, alignment: .center)
@@ -70,21 +73,23 @@ struct SignInView: View {
                 .overlay( RoundedRectangle(cornerRadius: 10)
                     .stroke(LinearGradient(
                         colors: [
-                            .red,
-                            .blue
+                            Color("Cactus"),
+                            Color("Grey Goose"),
+                            Color("Dark Grey Blue")
                         ],
                         startPoint: .leading,
                         endPoint: .trailing
                     )) )
-                
+                .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.2)
                 Button(action: {
                     viewRouter.currentPage = .MainPage
                 }, label: {
-                    Text("\(Image(systemName: "chevron.left")) Back")
-                        .font(.system(size: 15))
+                    Text("\(Image(systemName: "arrow.left"))")
+                        .font(.system(size: 20))
+                        .foregroundColor(Color("Cactus"))
                 })
                 .padding()
-                .position(x: geometry.size.width * 0.1, y: geometry.size.height * 0.01)
+                .position(x: geometry.size.width * 0.05, y: geometry.size.height * 0.02)
                 
                 Button(action: {
                     
@@ -96,18 +101,31 @@ struct SignInView: View {
                     
                 }, label: {
                     Text("Sign in")
-                        .font(.system(size: 30))
+                        .font(.custom(
+                            "Arial Italic",
+                            fixedSize: 20))
                         .foregroundColor(Color.white)
                 })
                 .padding()
                 .frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.06, alignment: .center)
-                .background(Color("Fern Green"))
+                .background(Color("Cactus"))
                 .cornerRadius(15)
-                .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.95)
+                .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.4)
                 .offset(y: -keyboardResponder.currentHeight*0.04)
                 
+                Divider()
+                    .frame(height: 3)
+                    .frame(width: 200)
+                    .overlay(Color("Cactus"))
+                    .position(x: geometry.size.width * 0.2, y: geometry.size.height * 0.6)
+                
+                Divider()
+                    .frame(height: 3)
+                    .frame(width: 200)
+                    .overlay(Color("Cactus"))
+                    .position(x: geometry.size.width * 0.8, y: geometry.size.height * 0.6)
             }
-           .background(Color("English Violet"))
+           .background(Color("Firefly"))
         }
     }
 }
