@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		EC7E557729D60FCF0010B529 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7E557629D60FCF0010B529 /* KeyboardResponder.swift */; };
+		EC93300529D92C6500113389 /* SwitchView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93300429D92C6500113389 /* SwitchView2.swift */; };
+		EC93300729D92CD200113389 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93300629D92CD200113389 /* MenuView.swift */; };
+		EC93300929D92CFB00113389 /* ViewRouter2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93300829D92CFB00113389 /* ViewRouter2.swift */; };
+		EC93300C29D93D9000113389 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = EC93300B29D93D9000113389 /* FirebaseFirestore */; };
+		EC93300E29D944FD00113389 /* DataFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93300D29D944FD00113389 /* DataFetch.swift */; };
+		EC93301829D9E53900113389 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93301729D9E53900113389 /* Workout.swift */; };
+		EC93301A29D9F47500113389 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93301929D9F47500113389 /* WorkoutView.swift */; };
+		EC93301D29D9F7DD00113389 /* StopwatchUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93301C29D9F7DD00113389 /* StopwatchUnitView.swift */; };
 		ECD5336C29D53B8400EA26A6 /* GetFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD5336B29D53B8400EA26A6 /* GetFitApp.swift */; };
 		ECD5336E29D53B8400EA26A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD5336D29D53B8400EA26A6 /* ContentView.swift */; };
 		ECD5337029D53B8700EA26A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECD5336F29D53B8700EA26A6 /* Assets.xcassets */; };
@@ -44,6 +52,13 @@
 
 /* Begin PBXFileReference section */
 		EC7E557629D60FCF0010B529 /* KeyboardResponder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
+		EC93300429D92C6500113389 /* SwitchView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchView2.swift; sourceTree = "<group>"; };
+		EC93300629D92CD200113389 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		EC93300829D92CFB00113389 /* ViewRouter2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter2.swift; sourceTree = "<group>"; };
+		EC93300D29D944FD00113389 /* DataFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetch.swift; sourceTree = "<group>"; };
+		EC93301729D9E53900113389 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		EC93301929D9F47500113389 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
+		EC93301C29D9F7DD00113389 /* StopwatchUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchUnitView.swift; sourceTree = "<group>"; };
 		ECD5336829D53B8400EA26A6 /* GetFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECD5336B29D53B8400EA26A6 /* GetFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFitApp.swift; sourceTree = "<group>"; };
 		ECD5336D29D53B8400EA26A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +84,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECD5339929D53CC900EA26A6 /* FirebaseAuth in Frameworks */,
+				EC93300C29D93D9000113389 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,13 +105,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC93300A29D93D9000113389 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC93301B29D9F7CA00113389 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		ECD5335F29D53B8400EA26A6 = {
 			isa = PBXGroup;
 			children = (
+				EC93301729D9E53900113389 /* Workout.swift */,
 				ECD5336A29D53B8400EA26A6 /* GetFit */,
 				ECD5337B29D53B8700EA26A6 /* GetFitTests */,
 				ECD5338529D53B8700EA26A6 /* GetFitUITests */,
 				ECD5336929D53B8400EA26A6 /* Products */,
+				EC93300A29D93D9000113389 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +144,7 @@
 		ECD5336A29D53B8400EA26A6 /* GetFit */ = {
 			isa = PBXGroup;
 			children = (
+				EC93301B29D9F7CA00113389 /* New Group */,
 				ECD5336B29D53B8400EA26A6 /* GetFitApp.swift */,
 				ECD5339C29D53F4500EA26A6 /* SignInView.swift */,
 				EC7E557629D60FCF0010B529 /* KeyboardResponder.swift */,
@@ -124,6 +157,12 @@
 				ECD5339529D53B9400EA26A6 /* GoogleService-Info.plist */,
 				ECD5336F29D53B8700EA26A6 /* Assets.xcassets */,
 				ECD5337129D53B8700EA26A6 /* Preview Content */,
+				EC93300429D92C6500113389 /* SwitchView2.swift */,
+				EC93300629D92CD200113389 /* MenuView.swift */,
+				EC93300829D92CFB00113389 /* ViewRouter2.swift */,
+				EC93300D29D944FD00113389 /* DataFetch.swift */,
+				EC93301929D9F47500113389 /* WorkoutView.swift */,
+				EC93301C29D9F7DD00113389 /* StopwatchUnitView.swift */,
 			);
 			path = GetFit;
 			sourceTree = "<group>";
@@ -171,6 +210,7 @@
 			name = GetFit;
 			packageProductDependencies = (
 				ECD5339829D53CC900EA26A6 /* FirebaseAuth */,
+				EC93300B29D93D9000113389 /* FirebaseFirestore */,
 			);
 			productName = GetFit;
 			productReference = ECD5336829D53B8400EA26A6 /* GetFit.app */;
@@ -296,7 +336,14 @@
 				ECD533A529D5404800EA26A6 /* SignUpView.swift in Sources */,
 				ECD5336C29D53B8400EA26A6 /* GetFitApp.swift in Sources */,
 				EC7E557729D60FCF0010B529 /* KeyboardResponder.swift in Sources */,
+				EC93300929D92CFB00113389 /* ViewRouter2.swift in Sources */,
 				ECD533A129D53FBF00EA26A6 /* MainView.swift in Sources */,
+				EC93301A29D9F47500113389 /* WorkoutView.swift in Sources */,
+				EC93300729D92CD200113389 /* MenuView.swift in Sources */,
+				EC93301D29D9F7DD00113389 /* StopwatchUnitView.swift in Sources */,
+				EC93301829D9E53900113389 /* Workout.swift in Sources */,
+				EC93300529D92C6500113389 /* SwitchView2.swift in Sources */,
+				EC93300E29D944FD00113389 /* DataFetch.swift in Sources */,
 				ECD5339F29D53F8D00EA26A6 /* ViewRouter.swift in Sources */,
 				ECD533A929D5417900EA26A6 /* SwitchView.swift in Sources */,
 			);
@@ -465,6 +512,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -494,6 +542,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -636,6 +685,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		EC93300B29D93D9000113389 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECD5339729D53CC900EA26A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
 		ECD5339829D53CC900EA26A6 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = ECD5339729D53CC900EA26A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

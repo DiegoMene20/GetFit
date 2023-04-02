@@ -23,12 +23,11 @@ struct SignInView: View {
         GeometryReader { geometry in
             ZStack{
                 
-                Text("LiftFit")
+                Image("Logo Text")
+                    .resizable()
+                    .frame(width: 300.0, height: 300.0)
                     .padding()
-                    .foregroundColor(Color("Cactus"))
-                    .font(.system(size: 60))
                     .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.10)
-                    .offset(y: -keyboardResponder.currentHeight*0.1)
                 
                 ZStack(alignment: .leading) {
                     if password.isEmpty {
@@ -37,7 +36,7 @@ struct SignInView: View {
                             .foregroundColor(Color.white.opacity(0.4))
                     }
                     
-                    TextField("", text: $password)
+                    SecureField("", text: $password)
                         .foregroundColor(Color.white)
                     
                 }
@@ -81,6 +80,9 @@ struct SignInView: View {
                         endPoint: .trailing
                     )) )
                 .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.2)
+                
+                
+                
                 Button(action: {
                     viewRouter.currentPage = .MainPage
                 }, label: {
@@ -107,7 +109,7 @@ struct SignInView: View {
                         .foregroundColor(Color.white)
                 })
                 .padding()
-                .frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.06, alignment: .center)
+                .frame(width: geometry.size.width * 0.94, height: geometry.size.height * 0.06, alignment: .center)
                 .background(Color("Cactus"))
                 .cornerRadius(15)
                 .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.4)

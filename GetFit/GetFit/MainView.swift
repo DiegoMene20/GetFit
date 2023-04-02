@@ -18,7 +18,9 @@ struct MainView: View {
         GeometryReader { geometry in
             ZStack {
                 
-                Image("Logo")
+                Image("New Logo")
+                    .resizable()
+                    .frame(width: 700.0, height: 600.0)
                     .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.4)
                     
                 /*
@@ -65,8 +67,8 @@ struct MainView: View {
                 .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.85)
                 
             }
-            .foregroundColor(.white)
-            .background(Color("Firefly"))        }
+            .background(Color("Firefly"))
+        }
     }
 }
 

@@ -63,37 +63,3 @@ struct YourApp: App {
         }
     }
 }
-/*
-struct TextFieldExample: View {
-    @State private var title: String = ""
-    @State private var category: String = ""
-    @State private var type: String = ""
-    
-    var body: some View {
-        VStack { Text("DevTechie Courses")
-                .font(.largeTitle)
-            
-            VStack(alignment: .leading) {
-                Text("Enter new course title")
-                    .font(.title3)
-                
-                ZStack(alignment: .leading) {
-                    if title.isEmpty {
-                        Text("Course title")
-                            .bold()
-                            .foregroundColor(Color.purple.opacity(0.4))
-                        
-                    }
-                    
-                    TextField("", text: $title)
-                    
-                }
-                .padding(.horizontal, 10)
-                .padding(.vertical, 4)
-                .overlay( RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color.purple, lineWidth: 1) )
-                
-            }
-        }
-    }
-*/

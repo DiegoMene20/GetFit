@@ -11,22 +11,22 @@ struct ContentView: View {
     
     @EnvironmentObject var viewModel: AppViewModel
     @StateObject var viewRouter = ViewRouter()
-    //@StateObject var viewRouter2 = ViewRouter2()
+    @StateObject var viewRouter2 = ViewRouter2()
     
     var body: some View {
         ZStack {
-    
-           // if viewModel.signedIn {
-           //     SwitchView2()
-          //          .environmentObject(viewModel)
-          //          .environmentObject(viewRouter2)
-          //          .environmentObject(viewRouter)
-          //
-         //   } else {
+            
+            if viewModel.signedIn {
+                SwitchView2()
+                    .environmentObject(viewModel)
+                    .environmentObject(viewRouter2)
+                    .environmentObject(viewRouter)
+                
+            } else {
                 SwitchView()
                     .environmentObject(viewModel)
                     .environmentObject(viewRouter)
-         //   }
+            }
         }
         .onAppear {
             viewModel.signedIn = viewModel.isSignedIn
