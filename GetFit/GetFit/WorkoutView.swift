@@ -10,6 +10,8 @@ import SwiftUI
 struct WorkoutView: View {
     
     @EnvironmentObject var viewRouter2: ViewRouter2
+    @EnvironmentObject var viewRouter3: ViewRouter3
+
     
     @State var startingTime = 0
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -85,7 +87,7 @@ struct WorkoutView: View {
                     Spacer().padding(.top, 60)
                     
                     Button(action: {
-                        viewRouter2.currentPage = .AddExercisePage
+                        viewRouter3.currentPage = .AddExercisePage
                     }, label: {
                         ZStack {
                             Text("\(Image(systemName: "plus.rectangle.fill"))")
@@ -123,6 +125,9 @@ struct WorkoutView: View {
                 
             }
             .background(Color("Firefly"))
+            .onAppear{
+                print(viewRouter3.todaysWorkoutObject?.date)
+            }
         }
     }
 }

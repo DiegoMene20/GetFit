@@ -67,6 +67,23 @@ struct SettingsView: View {
                 .position(x: geometry.size.width * 0.05, y: geometry.size.height * 0.02)
                 .zIndex(1)
                 
+                Button(action: {
+                    
+                    viewModel.signedIn = false
+                    
+                }, label: {
+                    Text("Sign up")
+                        .font(.custom(
+                            "Arial Italic",
+                            fixedSize: 20))
+                        .foregroundColor(Color.white)
+                })
+                .padding()
+                .frame(width: geometry.size.width * 0.94, height: geometry.size.height * 0.06, alignment: .center)
+                .background(Color("Cactus"))
+                .cornerRadius(15)
+                .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.5)
+                
                 
                 
             }

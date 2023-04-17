@@ -27,9 +27,6 @@ struct SwitchView2: View {
         case .DataPage:
             AddDataView()
                 .environmentObject(viewRouter2)
-        case .AddExercisePage:
-            AddExerciseView()
-                .environmentObject(viewRouter2)
         }
     }
 }

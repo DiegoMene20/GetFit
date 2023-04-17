@@ -13,6 +13,7 @@
 		EC6E420F29E1FDC0007E7939 /* AddExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6E420E29E1FDC0007E7939 /* AddExerciseView.swift */; };
 		EC6E421129EBAD53007E7939 /* SwitchView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6E421029EBAD53007E7939 /* SwitchView3.swift */; };
 		EC6E421329EBADC3007E7939 /* ViewRouter3.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6E421229EBADC3007E7939 /* ViewRouter3.swift */; };
+		EC6E421529ECE337007E7939 /* GetFit View Chart.docx in Resources */ = {isa = PBXBuildFile; fileRef = EC6E421429ECE336007E7939 /* GetFit View Chart.docx */; };
 		EC7E557729D60FCF0010B529 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7E557629D60FCF0010B529 /* KeyboardResponder.swift */; };
 		EC93300529D92C6500113389 /* SwitchView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93300429D92C6500113389 /* SwitchView2.swift */; };
 		EC93300729D92CD200113389 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93300629D92CD200113389 /* MenuView.swift */; };
@@ -61,6 +62,7 @@
 		EC6E420E29E1FDC0007E7939 /* AddExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerciseView.swift; sourceTree = "<group>"; };
 		EC6E421029EBAD53007E7939 /* SwitchView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchView3.swift; sourceTree = "<group>"; };
 		EC6E421229EBADC3007E7939 /* ViewRouter3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter3.swift; sourceTree = "<group>"; };
+		EC6E421429ECE336007E7939 /* GetFit View Chart.docx */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GetFit View Chart.docx"; path = "../../../Downloads/GetFit View Chart.docx"; sourceTree = "<group>"; };
 		EC7E557629D60FCF0010B529 /* KeyboardResponder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
 		EC93300429D92C6500113389 /* SwitchView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchView2.swift; sourceTree = "<group>"; };
 		EC93300629D92CD200113389 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 		ECD5336A29D53B8400EA26A6 /* GetFit */ = {
 			isa = PBXGroup;
 			children = (
+				EC6E421429ECE336007E7939 /* GetFit View Chart.docx */,
 				ECD5336B29D53B8400EA26A6 /* GetFitApp.swift */,
 				EC6E421029EBAD53007E7939 /* SwitchView3.swift */,
 				EC93301729D9E53900113389 /* WorkoutData.swift */,
@@ -312,6 +315,7 @@
 			files = (
 				ECD5337329D53B8700EA26A6 /* Preview Assets.xcassets in Resources */,
 				ECD5337029D53B8700EA26A6 /* Assets.xcassets in Resources */,
+				EC6E421529ECE337007E7939 /* GetFit View Chart.docx in Resources */,
 				ECD5339629D53B9500EA26A6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

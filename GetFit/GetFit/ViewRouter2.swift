@@ -15,7 +15,6 @@ class ViewRouter2: ObservableObject {
         case MenuPage
         case SettingsPage
         case DataPage
-        case AddExercisePage
         case SwitchPage
     }
     

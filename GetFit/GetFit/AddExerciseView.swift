@@ -12,6 +12,7 @@ struct AddExerciseView: View {
     
     @EnvironmentObject var viewModel: AppViewModel
     @EnvironmentObject var viewRouter2: ViewRouter2
+    @EnvironmentObject var viewRouter3: ViewRouter3
     @ObservedObject var keyboardResponder = KeyboardResponder()
     
     @ObservedObject private var DatafetchModel = DataFetchModel()
@@ -19,7 +20,6 @@ struct AddExerciseView: View {
     @State private var selection: String?
     
     @State var todaysDate: String = ""
-    
     
     var body: some View {
         GeometryReader { geometry in
@@ -76,17 +76,27 @@ struct AddExerciseView: View {
                     }
                     .frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.5, alignment: .center)
                     
+                    Button(action: {
+                        
+                        viewRouter3.currentPage = .WorkoutPage
+                        
+                    }, label: {
+                        Text("Add Exercise")
+                            .font(.custom(
+                                "Arial Italic",
+                                fixedSize: 30))
+                            .foregroundColor(Color.white)
+                    })
+                    .padding()
+                    .frame(width: geometry.size.width * 0.94, height: geometry.size.height * 0.06, alignment: .center)
+                    .background(Color("Cactus"))
+                    .cornerRadius(15)
+                    .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.97)
+                    .zIndex(1)
+                    
                 }
                 .background(Color("Firefly"))
                 .onAppear{
-                    let date = Date()
-                    let dateFormatter = DateFormatter()
-                    dateFormatter.dateFormat = "dd.MM.yyyy"
-                    self.todaysDate = dateFormatter.string(from: date)
-                    
-                    let emprtArr = [IndividualWorkoutObject]()
-                    
-                   // var todaysWorkout = DaysWorkoutObject(date: todaysDate, duration: 0, exerciseArray: emprtArr)
                 }
             }
         }

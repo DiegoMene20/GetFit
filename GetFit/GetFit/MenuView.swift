@@ -103,6 +103,16 @@ struct MenuView: View {
                 Button(action: {
                     viewRouter3.currentPage = .WorkoutPage
                     viewRouter2.currentPage = .SwitchPage
+                    
+                    let today = Date.now
+                    let formatter1 = DateFormatter()
+                    formatter1.dateStyle = .short
+                    
+                    let listOfExercises = [IndividualWorkoutObject]()
+                    
+                    var newWorkout = DaysWorkoutObject(date: formatter1.string(from: today), duration: 0, exerciseArray: listOfExercises)
+                    print(newWorkout.date)
+                  //  viewRouter3.todaysWorkoutObject = newWorkout
                 }, label: {
                     Text("Begin Workout")
                         .font(.custom(

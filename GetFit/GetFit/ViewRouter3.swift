@@ -10,6 +10,7 @@ import SwiftUI
 class ViewRouter3: ObservableObject {
     
     @Published var currentPage: Page = .WorkoutPage
+    @Published var todaysWorkoutObject: DaysWorkoutObject?
     
     enum Page {
         case WorkoutPage

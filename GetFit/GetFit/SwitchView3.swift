@@ -28,8 +28,12 @@ struct SwitchView3: View {
     }
 }
 
+
+
+/*
 struct SwitchView3_Previews: PreviewProvider {
     static var previews: some View {
         SwitchView3()
     }
 }
+*/
