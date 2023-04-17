@@ -22,20 +22,6 @@ struct MainView: View {
                     .resizable()
                     .frame(width: 700.0, height: 600.0)
                     .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.4)
-                    
-                /*
-                Text("GetFit")
-                    .padding()
-                    .foregroundColor(Color("Cactus"))
-                    .font(.system(size: 40))
-                    .position(x: geometry.size.width * 0.2, y: geometry.size.height * 0.04)
-                
-                Image("Man Lifting")
-                    .resizable()
-                    .frame(width: 620.0, height: 525.0)
-                    .opacity(0.3)
-                    .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.24)
-                 */
                 
                 Button(action: {
                   viewRouter.currentPage = .SignInPage

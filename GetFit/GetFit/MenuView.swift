@@ -11,6 +11,7 @@ struct MenuView: View {
     
     @EnvironmentObject var viewModel: AppViewModel
     @EnvironmentObject var viewRouter2: ViewRouter2
+    @EnvironmentObject var viewRouter3: ViewRouter3
     @ObservedObject var keyboardResponder = KeyboardResponder()
     
     @ObservedObject private var DatafetchModel = DataFetchModel()
@@ -20,32 +21,44 @@ struct MenuView: View {
             
             ZStack{
                 
-                HStack(spacing: 190){
-                    /*
-                     Text("\(DatafetchModel.saved_username)")
-                     .font(.custom(
-                     "Machine",
-                     fixedSize: 25))
-                     .foregroundColor(Color.white)
-                     */
-                    Text("Username")
+                ZStack{
+                    
+                    
+                    Text("\(DatafetchModel.saved_username)")
                         .font(.custom(
                             "Machine",
                             fixedSize: 25))
                         .foregroundColor(Color.white)
+                        .position(x: geometry.size.width * 0.2, y: geometry.size.height * 0.03)
                     
-                    HStack(spacing: 20){
-                        
-                        Image(systemName: "plus.app")
-                            .resizable()
-                            .frame(width: 30.0, height: 30.0)
-                            .foregroundColor(Color("Cactus"))
-                        
+                    
+                    if viewModel.auth.currentUser?.email == "test2@test.test"{
+                        Button(action: {
+                            viewRouter2.currentPage = .DataPage
+                        }, label: {
+                            Text("ADD DATA")
+                        })
+                        .position(x: geometry.size.width * 0.4, y: geometry.size.height * 0.03)
+                    }
+                    
+                    Button(action: {
+                        viewRouter2.currentPage = .SettingsPage
+                    }, label: {
                         Image(systemName: "gearshape.fill")
                             .resizable()
                             .frame(width: 30.0, height: 30.0)
                             .foregroundColor(Color("Cactus"))
-                    }
+                    })
+                    .frame(width: 30.0, height: 30.0)
+                    .position(x: geometry.size.width * 0.9, y: geometry.size.height * 0.03)
+                    
+                    Image(systemName: "plus.app")
+                        .resizable()
+                        .frame(width: 30.0, height: 30.0)
+                        .foregroundColor(Color("Cactus"))
+                        .position(x: geometry.size.width * 0.75, y: geometry.size.height * 0.03)
+                    
+                    
                 }
                 .frame(width: geometry.size.width * 1, height: geometry.size.height * 0.06, alignment: .center)
                 .background(Color("Firefly"))
@@ -58,14 +71,14 @@ struct MenuView: View {
                     .overlay(Color("Cactus"))
                     .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.05)
                     .zIndex(2)
-
+                
                 
                 ScrollView{
                     Spacer().padding(.top, 40)
                     
                     ZStack {
                         
-                            
+                        
                     }
                     .foregroundColor(Color.white)
                     .frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.1, alignment: .center)
@@ -74,7 +87,7 @@ struct MenuView: View {
                     
                     ZStack {
                         
-                            
+                        
                     }
                     .foregroundColor(Color.white)
                     .frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.1, alignment: .center)
@@ -88,8 +101,8 @@ struct MenuView: View {
                 .zIndex(0)
                 
                 Button(action: {
-                    viewRouter2.currentPage = .WorkoutPage
-                    
+                    viewRouter3.currentPage = .WorkoutPage
+                    viewRouter2.currentPage = .SwitchPage
                 }, label: {
                     Text("Begin Workout")
                         .font(.custom(
@@ -104,12 +117,22 @@ struct MenuView: View {
                 .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.95)
                 
             }
+            .onAppear{
+                let userEmail = viewModel.auth.currentUser?.email
+                if let userEmail = userEmail {
+                    self.DatafetchModel.fetchUsername(email: userEmail)
+                }
+                
+                self.DatafetchModel.getListOfExercises()
+                
+            }
         }
     }
 }
-
+/*
 struct MenuView_Previews: PreviewProvider {
     static var previews: some View {
         MenuView()
     }
 }
+*/

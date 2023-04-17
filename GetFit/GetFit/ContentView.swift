@@ -12,6 +12,8 @@ struct ContentView: View {
     @EnvironmentObject var viewModel: AppViewModel
     @StateObject var viewRouter = ViewRouter()
     @StateObject var viewRouter2 = ViewRouter2()
+    @StateObject var viewRouter3 = ViewRouter3()
+    
     
     var body: some View {
         ZStack {
@@ -21,6 +23,7 @@ struct ContentView: View {
                     .environmentObject(viewModel)
                     .environmentObject(viewRouter2)
                     .environmentObject(viewRouter)
+                    .environmentObject(viewRouter3)
                 
             } else {
                 SwitchView()

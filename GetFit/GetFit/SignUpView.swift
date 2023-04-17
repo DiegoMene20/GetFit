@@ -23,8 +23,6 @@ struct SignUpView: View {
     @State var password = ""
     @State var username = ""
     
-   // let db = Firestore.firestore()
-    
     
     var body: some View {
         GeometryReader { geometry in

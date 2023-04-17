@@ -13,7 +13,10 @@ class ViewRouter2: ObservableObject {
     
     enum Page {
         case MenuPage
-        case WorkoutPage
+        case SettingsPage
+        case DataPage
+        case AddExercisePage
+        case SwitchPage
     }
     
 }

@@ -17,9 +17,18 @@ struct SwitchView2: View {
         switch viewRouter2.currentPage {
         case .MenuPage:
             MenuView()
-                .environmentObject(viewRouter)
-        case .WorkoutPage:
-            WorkoutView()
+                .environmentObject(viewRouter2)
+        case .SwitchPage:
+            SwitchView3()
+                .environmentObject(viewRouter2)
+        case .SettingsPage:
+            SettingsView()
+                .environmentObject(viewRouter2)
+        case .DataPage:
+            AddDataView()
+                .environmentObject(viewRouter2)
+        case .AddExercisePage:
+            AddExerciseView()
                 .environmentObject(viewRouter2)
         }
     }
